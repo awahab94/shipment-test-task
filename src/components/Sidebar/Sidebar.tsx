@@ -6,7 +6,6 @@ import {
   UserIcon,
   DocumentIcon,
   PackageIcon,
-  ShipmentsIcon,
   WarehouseIcon,
   WalletIcon,
   SupportIcon,

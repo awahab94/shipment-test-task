@@ -12,6 +12,7 @@ type Props<T> = {
 const CustomTable = <T extends object>({ data, columns }: Props<T>) => {
   const tableComponents = {
     header: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       cell: (props: any) => (
         <th
           {...props}
