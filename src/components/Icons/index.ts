@@ -1,0 +1,11 @@
+export { default as HomeIcon } from "./Home/Home";
+export { default as UserIcon } from "./User/User";
+export { default as DocumentIcon } from "./Document/Document";
+export { default as PackageIcon } from "./Package/Package";
+export { default as ShipmentsIcon } from "./Shipments/Shipments";
+export { default as WarehouseIcon } from "./Warehouse/Warehouse";
+export { default as WalletIcon } from "./Wallet/Wallet";
+export { default as SupportIcon } from "./Support/Support";
+export { default as SettingsIcon } from "./Settings/Settings";
+export { default as LoginIcon } from "./Login/Login";
+export { default as LogoIcon } from "./Logo/Logo";

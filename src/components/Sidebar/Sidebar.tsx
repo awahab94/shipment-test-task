@@ -15,7 +15,7 @@ import Logo from '../Icons/Logo/Logo';
 const Sidebar = () => (
   <div
     style={{
-      width: 80,
+      width: 72,
       background: '#0052cc',
       position: 'fixed',
       height: '100vh',
