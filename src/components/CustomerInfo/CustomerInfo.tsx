@@ -1,59 +1,79 @@
+"use client";
+import React from "react";
+import { Typography } from "antd";
+import { BuildingIcon, FilledProfileIcon, UnitNumberIcon } from "../Icons";
 
+const { Text, Title } = Typography;
 
-import React from 'react';
-import { Row, Col } from 'antd';
-import { UserOutlined, ShopOutlined, AppstoreOutlined } from '@ant-design/icons';
-
-const cardStyle: React.CSSProperties = {
-  background: '#fff',
-  borderRadius: 12,
-  padding: '16px 24px',
-  display: 'flex',
-  alignItems: 'center',
-  gap: 12,
-  border: '1px solid #e0e0e0',
+const boxStyle: React.CSSProperties = {
+  backgroundColor: "#fff",
+  borderRadius: 8,
+  padding: "24px",
+  display: "flex",
+  alignItems: "center",
+  gap: 32,
+  width: "100%"
 };
 
-const labelStyle: React.CSSProperties = {
-  fontSize: 12,
-  color: '#888',
+const dividerStyle: React.CSSProperties = {
+  width: 1,
+  height: 48,
+  backgroundColor: "#E5E5E5"
 };
 
-const valueStyle: React.CSSProperties = {
-  fontWeight: 600,
-  fontSize: 16,
+const iconWrapperStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "2px solid #0057B8",
+  borderRadius: "50%",
+  padding: 10,
+  width: 40,
+  height: 40
 };
 
-const CustomerInfo = () => (
-  <Row gutter={16} style={{ marginBottom: 24 }}>
-    <Col span={8}>
-      <div style={cardStyle}>
-        <UserOutlined style={{ fontSize: 20, color: '#1677ff' }} />
-        <div>
-          <div style={labelStyle}>Customer name</div>
-          <div style={valueStyle}>Adedamola Olarele</div>
-        </div>
+const CustomerInfo: React.FC = () => (
+  <div style={boxStyle}>
+    <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
+      <div style={iconWrapperStyle}>
+        <FilledProfileIcon />
       </div>
-    </Col>
-    <Col span={8}>
-      <div style={cardStyle}>
-        <ShopOutlined style={{ fontSize: 20, color: '#1677ff' }} />
-        <div>
-          <div style={labelStyle}>Business name</div>
-          <div style={valueStyle}>Dolf Technologies</div>
-        </div>
+      <div style={{ marginLeft: 16 }}>
+        <Text>Customer name</Text>
+        <Title level={4} style={{ margin: 0 }}>
+          Adedamola Olarele
+        </Title>
       </div>
-    </Col>
-    <Col span={8}>
-      <div style={cardStyle}>
-        <AppstoreOutlined style={{ fontSize: 20, color: '#1677ff' }} />
-        <div>
-          <div style={labelStyle}>Unit no.</div>
-          <div style={valueStyle}>1E</div>
-        </div>
+    </div>
+
+    <div style={dividerStyle} />
+
+    <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
+      <div style={iconWrapperStyle}>
+        <BuildingIcon />
       </div>
-    </Col>
-  </Row>
+      <div style={{ marginLeft: 16 }}>
+        <Text>Business name</Text>
+        <Title level={4} style={{ margin: 0 }}>
+          Dolf Technologies
+        </Title>
+      </div>
+    </div>
+
+    <div style={dividerStyle} />
+
+    <div style={{ display: "flex", alignItems: "center", flex: 1 }}>
+      <div style={iconWrapperStyle}>
+        <UnitNumberIcon />
+      </div>
+      <div style={{ marginLeft: 16 }}>
+        <Text>Unit no.</Text>
+        <Title level={4} style={{ margin: 0 }}>
+          1E
+        </Title>
+      </div>
+    </div>
+  </div>
 );
 
 export default CustomerInfo;

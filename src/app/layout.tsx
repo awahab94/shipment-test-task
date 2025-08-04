@@ -1,23 +1,18 @@
-import "antd/dist/reset.css"; // Add this at the top
 import "./globals.css";
 import { ConfigProvider } from "antd";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Shipment UI",
-  description: "Ant Design + Next.js",
+  description: "Ant Design + Next.js"
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">
-        <ConfigProvider theme={{ token: { colorPrimary: "#0257b8" } }}>
-          {children}
-        </ConfigProvider>
+      <head />
+      <body>
+        <ConfigProvider theme={{ token: { colorPrimary: "#0257b8" } }}>{children}</ConfigProvider>
       </body>
     </html>
   );

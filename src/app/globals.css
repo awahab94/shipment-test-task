@@ -1,8 +1,8 @@
+@import "antd/dist/reset.css";
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
 
 html,
 body {
@@ -33,4 +33,14 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }

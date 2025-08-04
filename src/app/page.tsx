@@ -1,5 +1,7 @@
 import ShipmentPage from "@/template/ShipmentPage";
 
-export default function Home() {
+const Home = () => {
   return <ShipmentPage />;
-}
+};
+
+export default Home;
